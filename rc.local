@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ipset create netflix hash:ip family inet timeout 604800
+ipset create viki hash:ip family inet timeout 604800
+ipset create viu hash:ip family inet timeout 604800
+ipset create gcr hash:ip family inet timeout 604800
+ipset create zoom hash:ip family inet timeout 604800
+
+ipset restore -! < /opt/ipset-backup
+exit 0
